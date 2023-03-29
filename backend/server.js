@@ -6,13 +6,18 @@ import multer from "multer";
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173" }));
 
-app.get("/", (req, res) => {});
+//Middleware zum parsen von JSON
+app.use(express.json());
 
-app.get("/:postID", (req, res) => {});
+//handler für GET-Anfragen auf "/posts"
+app.get("api/posts", (req, res) => {});
 
-//Adminpage, wo der Admin einen neuen Post speichern kann
-app.post("/addPost", (req, res) => {});
+//handler für GET Anfragen auf "/:postID" einzelnen Blogeintrag
+app.get("api/posts/:postID", (req, res) => {});
+
+//handler für POST Anfragen auf "addPost"
+app.post("/api/addPost", (req, res) => {});
 
 app.listen(PORT, () => console.log("I listen to PORT", PORT));
