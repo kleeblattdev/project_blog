@@ -2,10 +2,8 @@ import { useState } from "react";
 
 const AdminPage = () => {
 	const handleSubmit = (e) => {
-		let id = "";
-		for (let i = 0; i < id.length; i++) {
-			id = i;
-		}
+		e.preventDefault();
+
 		const formData = new FormData(e.target);
 	};
 	return (

@@ -1,7 +1,10 @@
+//component import
+import BlogList from "../components/blogList/BlogList";
+
 const Home = () => {
 	return (
 		<main>
-			<h1>Home</h1>
+			<BlogList />
 		</main>
 	);
 };

@@ -1,7 +1,8 @@
 const DetailPage = () => {
 	return (
 		<main>
-			<h1>DetailPage</h1>
+			<h2>DetailPage Headline</h2>
+			<p>Description</p>
 		</main>
 	);
 };
