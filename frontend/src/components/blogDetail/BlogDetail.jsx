@@ -1,7 +1,10 @@
+//scss import
+import "./blogDetail.scss";
+
 const BlogDetail = ({ post }) => {
 	console.log(post);
 	return (
-		<section>
+		<section className="blogDetail">
 			<img
 				src={`http://localhost:3000/images/${post.image}`}
 				alt={post.title}

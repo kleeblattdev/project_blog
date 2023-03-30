@@ -16,10 +16,12 @@ const Home = () => {
 
 	return (
 		<main>
-			{posts &&
-				posts.map((post) => {
-					return <BlogArticle key={uuidv4()} post={post} />;
-				})}
+			<section className="blogList">
+				{posts &&
+					posts.map((post) => {
+						return <BlogArticle key={uuidv4()} post={post} />;
+					})}
+			</section>
 		</main>
 	);
 };

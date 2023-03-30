@@ -1,5 +1,60 @@
+/* 
+font-family: 'Baskervville', serif;
+font-family: 'Montserrat', sans-serif; */
+@font-face {
+	font-family: "Baskervville";
+	src: url("./assets/fonts/Baskervville/Baskervville-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	transition: all 0.5s linear;
+}
+
+h1,
+h2 {
+	font-family: "Baskervville", serif;
+}
+
+p,
+a,
+button {
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	margin: 20px;
+}
+
+.blogList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+button {
+	border-radius: 20px;
+	border: none;
+	background-color: steelblue;
+	padding: 10px 60px;
+	color: azure;
+	cursor: pointer;
 }

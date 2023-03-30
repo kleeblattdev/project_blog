@@ -7,7 +7,9 @@ import "./header.scss";
 const Header = () => {
 	return (
 		<header>
-			<h1>Super Backend Blog</h1>
+			<NavLink to="/">
+				<h1>Super Backend Blog</h1>
+			</NavLink>
 			<nav>
 				<NavLink to="/">Home</NavLink>
 				<NavLink to="/addPost">Admin</NavLink>
