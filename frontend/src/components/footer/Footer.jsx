@@ -4,7 +4,7 @@ import "./footer.scss";
 const Footer = () => {
 	return (
 		<footer>
-			<p>Made with ♥️</p>
+			<p>Made with ♥️ by Kleeblattdev</p>
 		</footer>
 	);
 };

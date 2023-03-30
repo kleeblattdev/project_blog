@@ -37,6 +37,7 @@ app.get("/api/getPosts", (req, res) => {
 //handler für POST Anfragen auf "addPost"
 app.post("/api/createPost", upload.single("image"), (req, res) => {
 	const data = req.body;
+
 	fileTypeFromBuffer(req.file.buffer).then((result) => {
 		if (result.ext === "png" || result.ext === "jpg" || result.ext === "jpeg") {
 			let filename = new Date().getTime();
@@ -45,6 +46,7 @@ app.post("/api/createPost", upload.single("image"), (req, res) => {
 				if (err) console.log(err);
 				else {
 					data.image = filename;
+					data.id = Math.floor(Math.random() * 1000);
 					appendPosts(data)
 						.then((newData) => res.json(newData))
 						.catch((err) => console.log(err));
@@ -57,6 +59,15 @@ app.post("/api/createPost", upload.single("image"), (req, res) => {
 });
 
 //handler für GET Anfragen auf "/:postID" einzelnen Blogeintrag
-app.get("api/posts/:postID", (req, res) => {});
+app.get("/api/getPosts/:postID", (req, res) => {
+	const postID = req.params.postID;
+	readPosts()
+		.then((data) => {
+			const singlePost = data.find((post) => post.id == postID);
+			console.log(singlePost);
+			res.json(singlePost);
+		})
+		.catch((err) => console.log(err));
+});
 
 app.listen(PORT, () => console.log("Server started on PORT", PORT));

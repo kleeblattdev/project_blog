@@ -1,7 +1,14 @@
 [
   {
-    "title": "First Entry",
-    "blogtext": "Das ist mein erster Eintrag",
-    "image": "1680166501135.jpg"
+    "title": "Day1",
+    "blogtext": "erster Eintrag",
+    "image": "1680177525988.jpg",
+    "id": 961
+  },
+  {
+    "title": "Day2",
+    "blogtext": "zweiter Eintrag",
+    "image": "1680177678435.jpg",
+    "id": 553
   }
 ]

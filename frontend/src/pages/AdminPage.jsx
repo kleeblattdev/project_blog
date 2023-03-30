@@ -18,7 +18,7 @@ const AdminPage = () => {
 			<form onSubmit={handleSubmit}>
 				<input type="text" name="title" placeholder="Title" />
 				<input type="file" name="image" placeholder="image" />
-				<input type="text" name="blogtext" />
+				<textarea name="blogtext" cols="30" rows="10"></textarea>
 				<button type="submit">Publish</button>
 			</form>
 		</main>

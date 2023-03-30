@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BlogArticle = ({ post }) => {
 	return (
-		<Link to="/:postID">
+		<Link to={`/${post.id}`}>
 			<article>
 				<img
 					src={`http://localhost:3000/images/${post.image}`}
