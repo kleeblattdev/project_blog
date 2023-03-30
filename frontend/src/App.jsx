@@ -9,15 +9,13 @@ import DetailPage from "./pages/DetailPage";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
-	const [count, setCount] = useState();
-
 	return (
 		<div className="App">
-			<Header />
 			<BrowserRouter>
+				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/addPost" element={<AdminPage />} />

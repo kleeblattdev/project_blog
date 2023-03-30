@@ -1,12 +1,15 @@
 //library import
 import { Link } from "react-router-dom";
 
-const BlogArticle = () => {
+const BlogArticle = ({ post }) => {
 	return (
 		<Link to="/:postID">
 			<article>
-				<img src="" alt="" />
-				<h1>Blogtitle</h1>
+				<img
+					src={`http://localhost:3000/images/${post.image}`}
+					alt={post.title}
+				/>
+				<h1>{post.title}</h1>
 			</article>
 		</Link>
 	);

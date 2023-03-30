@@ -5,20 +5,20 @@ const AdminPage = () => {
 		e.preventDefault();
 
 		const formData = new FormData(e.target);
+
+		fetch("http://localhost:3000/api/createPost", {
+			method: "POST",
+			body: formData,
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data));
 	};
 	return (
 		<main>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="title" hidden>
-					Blogtitle
-				</label>
 				<input type="text" name="title" placeholder="Title" />
-				<label htmlFor="image" hidden>
-					Upload image
-				</label>
 				<input type="file" name="image" placeholder="image" />
-				<label htmlFor="blogtext">Blogtext</label>
-				<textarea name="blogtext" cols="30" rows="10"></textarea>
+				<input type="text" name="blogtext" />
 				<button type="submit">Publish</button>
 			</form>
 		</main>

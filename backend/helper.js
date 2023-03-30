@@ -1,4 +1,4 @@
-import fs, { readFile } from "fs";
+import fs from "fs";
 
 export const readPosts = () => {
 	return new Promise((resolve, reject) => {
@@ -11,9 +11,9 @@ export const readPosts = () => {
 	});
 };
 
-export const writePost = () => {
+export const writePost = (data) => {
 	return new Promise((resolve, reject) => {
-		fs.writeFile("./post.json", JSON.stringify(data, null, 2), (err) => {
+		fs.writeFile("./posts.json", JSON.stringify(data, null, 2), (err) => {
 			if (err) reject(err);
 			else {
 				resolve();
@@ -22,9 +22,9 @@ export const writePost = () => {
 	});
 };
 
-export const appendPosts = () => {
+export const appendPosts = (newPost) => {
 	return new Promise((resolve, reject) => {
-		readFile().then((oldPosts) => {
+		readPosts().then((oldPosts) => {
 			const newData = [...oldPosts, newPost];
 			writePost(newData)
 				.then((res) => resolve(newData))

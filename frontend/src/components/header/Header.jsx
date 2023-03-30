@@ -9,8 +9,8 @@ const Header = () => {
 		<header>
 			<h1>Super Backend Blog</h1>
 			<nav>
-				{/* 				<Link to="/">Home</Link>
-				<Link to="/addPost">Admin</Link> */}
+				<NavLink to="/">Home</NavLink>
+				<NavLink to="/addPost">Admin</NavLink>
 			</nav>
 		</header>
 	);
